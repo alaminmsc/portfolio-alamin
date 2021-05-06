@@ -10,19 +10,20 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
+    <div className="top_60">
     <Container>
-      <Grid container>
-        <Grid item xs={12} md={4} lg={3}>
+      <Grid container spacing={7}>
+        <Grid item xs={12} md={4} lg={3} sm={12}>
           <Profile></Profile>
         </Grid>
-        <Grid item xs style={{ background: "red" }}>
+        <Grid item xs>
           <Header></Header>
           <Router>
             <Switch>
               <Route path="/portfolio">
                 <Portfolio></Portfolio>
               </Route>
-              <Route path="/">
+              <Route path="/resume">
                 <Resume></Resume>
               </Route>
             </Switch>
@@ -31,6 +32,7 @@ function App() {
         </Grid>
       </Grid>
     </Container>
+    </div>
   );
 }
 

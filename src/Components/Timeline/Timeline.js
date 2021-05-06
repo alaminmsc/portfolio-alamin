@@ -7,7 +7,14 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import './Timeline.css';
 import { Typography } from '@material-ui/core';
-import WorkIcon from '@material-ui/icons/Work';
+
+
+export const CustomTimeLineSeparator = () => {
+  <TimelineSeparator className="separator_padding">
+  <TimelineDot className="timeline_dot" />
+  <TimelineConnector />
+</TimelineSeparator>
+}
 
 const CustomTimeline = ({title,icon,children}) => {
     return (
@@ -18,31 +25,56 @@ const CustomTimeline = ({title,icon,children}) => {
             <TimelineDot className="timeline_dot_header">
                {icon}
             </TimelineDot>
-            <TimelineConnector />
+            
           </TimelineSeparator>
-          <TimelineContent><Typography variant="h6" className="timeline_header">{title}</Typography> </TimelineContent>
+          <TimelineContent><Typography variant="h6" className="timeline_header"></Typography> </TimelineContent>
         </TimelineItem>
 
-        {children}
+      {/* Remaining content */}
+      <TimelineItem className="timeline_secondItem">
+          <TimelineSeparator className="separator_padding">
+            <TimelineDot className="timeline_dot">
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent><Typography>Name:</Typography> </TimelineContent>
+        </TimelineItem>
 
-        {/* Remaining item */}
-
-        {/* <TimelineItem>
-        <TimelineSeparator className="separator_padding">
-    <TimelineDot variant='outlined' className="timeline_dot" />
-    <TimelineConnector />
-  </TimelineSeparator>
-          <TimelineContent>Code</TimelineContent>
-        </TimelineItem> */}
+      <TimelineItem className="timeline_secondItem">
+          <TimelineSeparator className="separator_padding">
+            <TimelineDot className="timeline_dot">
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent><Typography>Email:</Typography> </TimelineContent>
+        </TimelineItem>
+        <TimelineItem className="timeline_secondItem">
+          <TimelineSeparator className="separator_padding">
+            <TimelineDot className="timeline_dot">
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent><Typography>LinkedIn</Typography> </TimelineContent>
+        </TimelineItem>
+        <TimelineItem className="timeline_secondItem">
+          <TimelineSeparator className="separator_padding">
+            <TimelineDot className="timeline_dot">
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent><Typography>Github</Typography> </TimelineContent>
+        </TimelineItem>
+        <TimelineItem className="timeline_secondItem">
+          <TimelineSeparator className="separator_padding">
+            <TimelineDot className="timeline_dot">
+            </TimelineDot>
+          </TimelineSeparator>
+          <TimelineContent><Typography>Twitter</Typography> </TimelineContent>
+        </TimelineItem>
       </Timeline>
     );
 };
 
-export const CustomTimeLineSeparator = () => {
-    <TimelineSeparator className="separator_padding">
-    <TimelineDot className="timeline_dot" />
-    <TimelineConnector />
-  </TimelineSeparator>
- }
+
 
 export default CustomTimeline;
