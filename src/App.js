@@ -18,7 +18,8 @@ function App() {
         </Grid>
         <Grid item xs>
           <Header></Header>
-          <Router>
+          <div className="displaySection">
+          <Router >
             <Switch>
               <Route path="/portfolio">
                 <Portfolio></Portfolio>
@@ -28,6 +29,7 @@ function App() {
               </Route>
             </Switch>
           </Router>
+          </div>
           <Footer></Footer>
         </Grid>
       </Grid>

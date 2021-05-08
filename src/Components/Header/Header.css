@@ -1,0 +1,20 @@
+.header_home{
+    background-color: var(--main-color);
+    padding: 10px;    
+}
+.socialLink{
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+    margin-left: 30px;
+}
+.hireMe {
+    text-align: right;
+}
+.hireMe button{
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 5px;
+}

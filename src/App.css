@@ -5,6 +5,13 @@
 /* Margin and padding */
 .top_60{
   margin-top: 60px !important;
+
+}
+
+.displaySection {
+  background-color: yellow !important;
+  margin-top: 40px;
+  padding: 5px;
 }
 
 
